@@ -1,9 +1,9 @@
 <h2>{{model.title}}</h2>
+{{menu-item-create-form}}
 <ul>
   {{#each model.menuItems as |items|}}
     <li>{{items.name}} ${{items.price}}</li>
     {{!-- component here? --}}
   {{/each}}
 </ul>
-
 {{#link-to 'menus'}}Back to Menus{{/link-to}}
