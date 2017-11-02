@@ -1,1 +1,8 @@
-{{yield}}
+<h4>Create A New Menu</h4>
+<form {{action 'createMenu' on='submit'}}>
+  <label for="MenuName">Menu Name</label>
+  {{input class="MenuName form-control" value=menu.title placeholder="New Menu Name (eg: Breakfast, Lunch, Dinner)"}}
+  <label for="MenuNotes">Menu Notes</label>
+  {{input class="MenuNotes form-control" value=menu.notes placeholder="Notes (eg: 9AM-11AM only, Sun & Sat only)"}}
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
