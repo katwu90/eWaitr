@@ -1,1 +1,9 @@
 <h2>Your Menus</h2>
+<h4>Create New Menu</h4>
+{{input}}
+<ul>
+  {{#each model as |menu|}}
+    {{menu-title menu=menu}}
+  {{/each}}
+</ul>
+{{#link-to 'application'}}Go back to home{{/link-to}}
