@@ -14,6 +14,13 @@ export default Ember.Route.extend({
     },
     deleteMenu (menu) {
       menu.destroyRecord().then(() => this.transitionTo('menus'));
+    },
+    updateMenuItem (item, name, price, description, foodCategory) {
+      item.set('name', name);
+      item.set('price', price);
+      item.set('description', description);
+      item.set('foodCategory', foodCategory);
+      item.save();
     }
   }
 });

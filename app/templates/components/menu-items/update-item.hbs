@@ -1,0 +1,17 @@
+<button class="btn btn-warning" {{action "launchConfirmDialog"}}>{{text}}</button>
+{{#if confirmShown}}
+  <div class="confirm-dialog">
+    <form {{action 'updateMenuItem' on='submit'}}>
+      <label for="menuItemName">Name of Dish*</label>
+      {{input class="menuItemName form-control" value=this.name placeholder=item.name}}
+      <label for="menuItemPrice">Price*</label>
+      {{input class="menuItemPrice form-control" value=this.price placeholder=item.price}}
+      <label for="menuItemDishCategory">Dish Category</label>
+      {{input class="menuItemDishCategory form-control" value=this.foodCategory placeholder=item.foodCategory}}
+      <label for="menuItemDescription">Menu Description</label>
+      {{textarea class="menuItemDescription form-control" rows="5" value=this.description placeholder=item.description}}
+      <button type="submit" class="btn btn-success confirm-submit">Submit</button>
+      <button class="btn btn-primary confirm-cancel" {{action 'cancelConfirm'}}>Cancel</button>
+    </form>
+  </div>
+{{/if}}

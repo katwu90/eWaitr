@@ -2,7 +2,7 @@
 {{menu-item-create-form menu=model createMenuItem='createMenuItem'}}
 <div>
   {{#each model.menuItems as |item|}}
-    {{menu-items item=item deleteItem='deleteItem'}}
+    {{menu-items item=item deleteItem='deleteItem' updateMenuItem='updateMenuItem'}}
   {{/each}}
 </div>
 
