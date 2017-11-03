@@ -1,7 +1,7 @@
 <button class="btn btn-danger" {{action "launchConfirmDialog"}}>{{text}}</button>
-{{!-- {{#if confirmShown}}
+{{#if confirmShown}}
   <div class="confirm-dialog">
-    <button class="confirm-submit" {{action "submitConfirm"}}>OK</button>
-    <button class="confirm-cancel" {{action "cancelConfirm"}}>Cancel</button>
+    <button class="btn btn-danger confirm-submit" {{action 'deleteMenuConfirm'}}>OK</button>
+    <button class="btn btn-primary confirm-cancel" {{action 'cancelConfirm'}}>Cancel</button>
   </div>
-{{/if}} --}}
+{{/if}}

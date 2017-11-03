@@ -10,6 +10,7 @@ export default Ember.Component.extend({
       this.sendAction('createMenu', this.get('menu'));
       this.set('menu.title', null);
       this.set('menu.notes', null);
-    }
+    },
+
   }
 });
