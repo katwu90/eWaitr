@@ -6,6 +6,6 @@
   {{/each}}
 </div>
 
-<button class="btn btn-danger" {{action hideDeleteButton}}>Delete this menu</button>
+{{button-with-confirmation text="Delete Menu"}}
 
 <br>{{#link-to 'menus'}}Back to Menus{{/link-to}}
