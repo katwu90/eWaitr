@@ -1,8 +1,9 @@
 <h2>{{model.title}}</h2>
-{{menu-item-create-form}}
+{{menu-item-create-form menu=model createMenuItem='createMenuItem'}}
 <ul>
-  {{#each model.menuItems as |items|}}
-    <li>{{items.name}} ${{items.price}}</li>
+  {{#each model.menuItems as |item|}}
+    <li>{{item.name}} ${{item.price}}</li>
+    {{item.description}}
     {{!-- component here? --}}
   {{/each}}
 </ul>
