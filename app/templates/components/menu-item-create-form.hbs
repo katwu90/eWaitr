@@ -1,12 +1,12 @@
 <h4>Add a new item to your menu</h4>
 <form {{action 'createMenuItem' on='submit'}}>
   <label for="menuItemName">Name of Dish*</label>
-  {{input class="menuItemName form-control" value=menuItem.name placeholder="Dish Name (eg: Eggs Benedict)"}}
+  {{input class="menuItemName form-control" value=menuItem.name placeholder="Dish Name (e.g: Eggs Benedict)"}}
   <label for="menuItemPrice">Price*</label>
-  {{input class="menuItemPrice form-control" value=menuItem.price placeholder="Price (Numbers ONLY eg: 5)"}}
+  {{input class="menuItemPrice form-control" value=menuItem.price placeholder="Price (Numbers ONLY e.g: 5)"}}
   <label for="menuItemDishCategory">Dish Category</label>
   {{input class="menuItemDishCategory form-control" value=menuItem.foodCategory placeholder="Appetizer, Entree, etc."}}
   <label for="menuItemDescription">Menu Description</label>
-  {{textarea class="menuItemDescription form-control" rows="5" value=menuItem.description placeholder="Add Description (eg: Lightly toasted English muffin topped with bacon and a poached egg)"}}
+  {{textarea class="menuItemDescription form-control" rows="5" value=menuItem.description placeholder="Add Description (e.g: Lightly toasted English muffin topped with bacon and a poached egg)"}}
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

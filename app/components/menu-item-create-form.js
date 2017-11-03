@@ -10,7 +10,6 @@ export default Ember.Component.extend({
   actions: {
     createMenuItem () {
       this.get('menuItem').menu = this.get('menu');
-      console.log(this.get('menuItem'));
       this.sendAction('createMenuItem', this.get('menuItem'));
       this.set('menuItem.name', null);
       this.set('menuItem.price', null);

@@ -1,0 +1,36 @@
+body {
+  font-family: 'Lato', helvetica, sans-serif;
+};
+
+label {
+  text-transform: uppercase;
+};
+
+button {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 12px;
+};
+
+.items {
+  border: dashed 1px;
+  padding: 15px;
+  margin: 5px;
+}
+
+
+.menu-title {
+  text-transform: uppercase;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.item-name {
+  text-transform: uppercase;
+};
+
+.hide-delete-button {
+  display: none;
+}

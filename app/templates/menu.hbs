@@ -1,10 +1,11 @@
 <h2>{{model.title}}</h2>
 {{menu-item-create-form menu=model createMenuItem='createMenuItem'}}
-<ul>
+<div>
   {{#each model.menuItems as |item|}}
-    <li>{{item.name}} ${{item.price}}</li>
-    {{item.description}}
-    {{!-- component here? --}}
+    {{menu-items item=item}}
   {{/each}}
-</ul>
-{{#link-to 'menus'}}Back to Menus{{/link-to}}
+</div>
+
+<button class="btn btn-danger" {{action hideDeleteButton}}>Delete this menu</button>
+
+<br>{{#link-to 'menus'}}Back to Menus{{/link-to}}
