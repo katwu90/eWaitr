@@ -9,6 +9,9 @@ export default Ember.Route.extend({
       let newMenuItem = this.get('store').createRecord('menuItem', menuItem);
       newMenuItem.save();
     },
+    deleteItem(item) {
+      item.destroyRecord();
+    },
     deleteMenu (menu) {
       menu.destroyRecord().then(() => this.transitionTo('menus'));
     }
