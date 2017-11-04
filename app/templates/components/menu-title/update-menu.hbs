@@ -1,1 +1,13 @@
-{{yield}}
+<button class="btn btn-warning" {{action "launchConfirmDialog"}}>{{text}}</button>
+{{#if confirmShown}}
+  <div class="confirm-dialog">
+    <form {{action 'updateMenu' on='submit'}}>
+      <label for="menuTitle">Menu Name</label>
+      {{input class="menuTitle form-control" value=this.title placeholder=menu.title}}
+      <label for="menuNotes">Menu Notes</label>
+      {{input class="menuNots form-control" value=this.notes placeholder=menu.notes}}
+      <button type="submit" class="btn btn-success confirm-submit">Submit</button>
+      <button type="button" class="btn btn-secondary confirm-cancel" {{action 'cancelConfirm'}}>Cancel</button>
+    </form>
+  </div>
+{{/if}}

@@ -1,5 +1,5 @@
 <h2>{{model.title}}</h2>
-{{menu-item-create-form menu=model createMenuItem='createMenuItem'}}
+{{menu-item-create-form text="Add A New Item to Your Menu" menu=model createMenuItem='createMenuItem'}}
 <div>
   {{#each model.menuItems as |item|}}
     {{menu-items item=item deleteItem='deleteItem' updateMenuItem='updateMenuItem'}}

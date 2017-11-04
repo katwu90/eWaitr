@@ -8,6 +8,9 @@ export default Ember.Component.extend({
     foodCategory: null
   },
   actions: {
+    launchConfirmDialog() {
+      this.set('confirmShown', true);
+    },
     createMenuItem () {
       this.get('menuItem').menu = this.get('menu');
       this.sendAction('createMenuItem', this.get('menuItem'));
@@ -15,6 +18,10 @@ export default Ember.Component.extend({
       this.set('menuItem.price', null);
       this.set('menuItem.description', null);
       this.set('menuItem.foodCategory', null);
+      this.set('confirmShown', false);
+    },
+    cancelConfirm() {
+      this.set('confirmShown', false);
     }
   }
 });

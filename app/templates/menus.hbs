@@ -1,8 +1,8 @@
 <h2>Your Menus</h2>
-{{menu-create-form createMenu='createMenu'}}
+{{menu-create-form text="Create A New Menu" createMenu='createMenu'}}
 <div>
   {{#each model as |menu|}}
-    {{menu-title menu=menu}}
+    {{menu-title menu=menu updateMenu='updateMenu'}}
   {{/each}}
 </div>
 {{#link-to 'application'}}Go back to home{{/link-to}}

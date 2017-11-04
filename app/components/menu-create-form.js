@@ -6,11 +6,17 @@ export default Ember.Component.extend({
     notes: null
   },
   actions: {
+    launchConfirmDialog() {
+      this.set('confirmShown', true);
+    },
     createMenu () {
       this.sendAction('createMenu', this.get('menu'));
       this.set('menu.title', null);
       this.set('menu.notes', null);
+      this.set('confirmShown', false);
     },
-
+    cancelConfirm() {
+      this.set('confirmShown', false);
+    }
   }
 });
