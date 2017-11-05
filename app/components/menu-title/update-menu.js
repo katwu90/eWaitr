@@ -5,7 +5,7 @@ export default Ember.Component.extend({
   notes: Ember.computed.oneWay('menu.notes'),
   actions: {
     launchConfirmDialog() {
-      this.set('confirmShown', true);
+      this.toggleProperty('confirmShown');
     },
     updateMenu(menu) {
       this.sendAction('updateMenu', this.get('menu'), this.get('title'), this.get('notes'))

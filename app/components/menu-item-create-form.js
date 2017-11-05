@@ -9,7 +9,7 @@ export default Ember.Component.extend({
   },
   actions: {
     launchConfirmDialog() {
-      this.set('confirmShown', true);
+      this.toggleProperty('confirmShown');
     },
     createMenuItem () {
       this.get('menuItem').menu = this.get('menu');

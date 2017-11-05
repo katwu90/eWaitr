@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   actions: {
     launchConfirmDialog() {
-      this.set('confirmShown', true);
+      this.toggleProperty('confirmShown');
     },
     deleteMenuConfirm(menu) {
       //call the onConfirm property to invoke the passed in action

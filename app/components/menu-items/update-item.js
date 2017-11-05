@@ -7,7 +7,7 @@ export default Ember.Component.extend({
   foodCategory: Ember.computed.oneWay('item.foodCategory'),
   actions: {
     launchConfirmDialog() {
-      this.set('confirmShown', true);
+      this.toggleProperty('confirmShown');
     },
     updateMenuItem(item) {
       this.sendAction('updateMenuItem', this.get('item'), this.get('name'), this.get('price'), this.get('description'), this.get('foodCategory'))
