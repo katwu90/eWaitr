@@ -53,7 +53,7 @@ module.exports = function (environment) {
     ENV.locationType = 'hash';
     ENV.rootURL = '/eWaitr';
     ENV.locationType = 'hash';
-    ENV.apiHost = 'http://ewaitr.herokuapp.com/';
+    ENV.apiHost = 'http://ewaitr.herokuapp.com';
   }
 
   return ENV;
