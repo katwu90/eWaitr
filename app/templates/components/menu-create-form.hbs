@@ -1,5 +1,6 @@
-<button class="btn btn-success" {{action "launchConfirmDialog"}}><span class="glyphicon glyphicon-pencil"></span> {{text}}</button>
-{{#if confirmShown}}
+<div class="row">
+  <button class="btn btn-success" {{action "launchConfirmDialog"}}><span class="glyphicon glyphicon-pencil"></span> {{text}}</button>
+  {{#if confirmShown}}
   <div class="confirm-dialog">
     <form {{action 'createMenu' on='submit'}}>
       <label for="MenuName">Menu Name*</label>
@@ -10,4 +11,5 @@
       <button class="btn btn-secondary confirm-cancel" {{action 'cancelConfirm'}}>Cancel</button>
     </form>
   </div>
-{{/if}}
+  {{/if}}
+</div>

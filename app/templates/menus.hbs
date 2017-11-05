@@ -1,8 +1,12 @@
 <h2>Your Menus</h2>
 {{menu-create-form text="Create A New Menu" createMenu='createMenu'}}
-<div>
+<div class="container-fluid">
+<div class="row">
   {{#each model as |menu|}}
     {{menu-title menu=menu updateMenu='updateMenu'}}
   {{/each}}
 </div>
-{{#link-to 'application'}}Go back to home{{/link-to}}
+<div class="row">
+  {{#link-to 'application'}}Go back to home{{/link-to}}
+</div>
+</div>
