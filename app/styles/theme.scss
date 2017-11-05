@@ -2,6 +2,29 @@ body {
   font-family: 'Lato', helvetica, sans-serif;
 };
 
+// .navbar{
+//   background-color: rgb(144, 188, 240);
+// };
+li.nav-links {
+  color: #fffff;
+};
+// .image-box {
+//   height: 500px;
+//   background-image: url(https://i.imgur.com/aUnknzZ.jpg);
+//   background-repeat: no-repeat;
+//   background-attachment: fixed;
+//   background-position: center;
+//   background-size: cover;
+// };
+input {
+
+}
+.introduction-text {
+  margin: auto;
+  background-color: rgba(201, 196, 212, 0.5);
+  padding: 30px;
+
+}
 label {
   text-transform: uppercase;
 };

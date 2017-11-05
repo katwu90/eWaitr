@@ -1,4 +1,4 @@
-<button class="btn btn-danger" {{action "launchConfirmDialog"}}>{{text}}</button>
+<button class="btn btn-danger" {{action "launchConfirmDialog"}}><span class="glyphicon glyphicon-trash"></span> {{text}}</button>
 {{#if confirmShown}}
   <div class="confirm-dialog">
     <button class="btn btn-danger confirm-submit" {{action 'deleteItemConfirm'}}>OK</button>

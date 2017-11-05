@@ -1,9 +1,1 @@
-{
-  "name": "eWaitr",
-  "dependencies": {
-    "ember": "~2.10.1",
-    "ember-cli-shims": "0.1.3",
-    "ember-qunit-notifications": "0.1.0",
-    "bootstrap-sass": "^3.3.7"
-  }
-}
+{"name":"ewaitr","dependencies":{"ember":"~2.10.1","ember-cli-shims":"0.1.3","ember-qunit-notifications":"0.1.0"}}

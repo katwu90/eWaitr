@@ -1,27 +1,43 @@
-<nav class="navbar navbar-default">
+
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     {{navbar-header}}
 
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
-        <li>{{#link-to "menus"}}Menus{{/link-to}}</li>
+        <li class="nav-links">{{#link-to "menus"}}Menus <span class="glyphicon glyphicon-cutlery"></span> {{/link-to}}</li>
         {{/if}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
         {{#if isAuthenticated}}
-        <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
-        <li><a href="#" {{action "signOut"}}>Sign Out</a></li>
+        <li class="nav-links">{{#link-to "change-password"}}Change Password{{/link-to}}</li>
+        <li class="nav-links"><a href="#" {{action "signOut"}}>Sign Out</a></li>
         {{else}}
-        <li>{{#link-to "sign-up"}}Sign Up{{/link-to}}</li>
-        <li>{{#link-to "sign-in"}}Sign In{{/link-to}}</li>
+        <li class="nav-links">{{#link-to "sign-up"}}Sign Up{{/link-to}}</li>
+        <li class="nav-links">{{#link-to "sign-in"}}Sign In{{/link-to}}</li>
         {{/if}}
       </ul>
     </div>
   </div>
 </nav>
-
-<h1>Welcome to eWaitr!</h1>
+{{!-- <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarToggler">
+    {{#link-to "application" class="navbar-brand"}}eWaitr{{/link-to}}
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      {{#if isAuthenticated}}
+      <li class="nav-links">{{#link-to "change-password"}}Change Password{{/link-to}}</li>
+      <li class="nav-links"><a href="#" {{action "signOut"}}>Sign Out</a></li>
+      {{else}}
+      <li class="nav-links">{{#link-to "sign-up"}}Sign Up{{/link-to}}</li>
+      <li class="nav-links">{{#link-to "sign-in"}}Sign In{{/link-to}}</li>
+      {{/if}}
+    </ul>
+  </div>
+</nav> --}}
 
 {{#each flashMessages.queue as |flash|}}
   {{flash-message flash=flash}}

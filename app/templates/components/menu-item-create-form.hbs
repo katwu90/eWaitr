@@ -1,11 +1,13 @@
-<button class="btn btn-success" {{action "launchConfirmDialog"}}>{{text}}</button>
+<button class="btn btn-success" {{action "launchConfirmDialog"}}><span class="glyphicon glyphicon-pencil"></span> {{text}}</button>
 {{#if confirmShown}}
   <div class="confirm-dialog">
     <form {{action 'createMenuItem' on='submit'}}>
       <label for="menuItemName">Name of Dish*</label>
       {{input class="menuItemName form-control" value=menuItem.name placeholder="Dish Name (e.g: Eggs Benedict)"}}
       <label for="menuItemPrice">Price*</label>
-      {{input class="menuItemPrice form-control" value=menuItem.price placeholder="Price (Numbers ONLY e.g: 5)"}}
+      <div class="input-group">
+      <span class="input-group-addon">$</span>{{input class="menuItemPrice form-control" value=menuItem.price placeholder="Price (Numbers ONLY e.g: 5)" aria-label="Amount (to the nearest dollar)"}}
+      </div>
       <label for="menuItemDishCategory">Dish Category</label>
       {{input class="menuItemDishCategory form-control" value=menuItem.foodCategory placeholder="Appetizer, Entree, etc."}}
       <label for="menuItemDescription">Menu Description</label>
