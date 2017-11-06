@@ -1,4 +1,4 @@
-<button class="btn btn-warning" {{action "launchConfirmDialog"}}>{{text}}</button>
+<div class="food-category"><button class="btn btn-warning food-category" {{action "launchConfirmDialog"}}>{{text}}</button></div>
 {{#if confirmShown}}
   <div class="confirm-dialog">
     <form {{action 'updateMenuItem' on='submit'}}>

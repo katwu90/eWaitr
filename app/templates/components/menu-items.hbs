@@ -1,6 +1,5 @@
-<h3 class="menu-item item-name"><{{item.foodCategory}}</h3>
-<h3 class="menu-item item-name"><{{item.name}}</h3>
-<h4 class="menu-item item-price">${{item.price}}</h4>
-<p class="menu-item item-description">{{item.description}}</p>
-{{item-delete-button-confirmation item=item text="Delete This Item" deleteItemConfirm='deleteItem'}}
+<h3 class="item-name food-category">{{item.foodCategory}}</h3>
+<h4 class="food-name">{{item.name}} ${{item.price}}</h4>
+<p class="food-name">{{item.description}}</p>
 {{menu-items/update-item item=item text="Update this item" updateMenuItem='updateMenuItem'}}
+{{item-delete-button-confirmation item=item text="Delete This Item" deleteItemConfirm='deleteItem'}}

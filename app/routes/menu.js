@@ -15,7 +15,7 @@ export default Ember.Route.extend({
       .catch(() => {
         newMenuItem.rollbackAttributes();
         this.get('flashMessages').danger('Failed to add new item, please check all required fields.');
-      })
+      });
     },
     deleteItem(item) {
       item.destroyRecord();
@@ -35,7 +35,7 @@ export default Ember.Route.extend({
       .catch(() => {
         item.rollbackAttributes();
         this.get('flashMessages').danger('Failed to update, please check all required fields!');
-      })
+      });
     }
   }
 });

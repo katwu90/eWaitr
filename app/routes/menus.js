@@ -15,7 +15,7 @@ export default Ember.Route.extend({
       .catch(() => {
         newMenu.rollbackAttributes();
         this.get('flashMessages').danger('Failed to create menu, please check all required fields!');
-      })
+      });
     },
     updateMenu (menu, title, notes) {
       menu.set('title', title);
@@ -24,10 +24,10 @@ export default Ember.Route.extend({
       .then(() => {
         this.get('flashMessages').success('Successfully updated!');
       })
-      .catch((error) => {
+      .catch(() => {
         menu.rollbackAttributes();
         this.get('flashMessages').danger('Failed to update, please check all required fields!');
-      })
+      });
     }
   }
 });

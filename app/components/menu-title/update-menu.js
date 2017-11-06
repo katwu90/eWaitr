@@ -7,8 +7,8 @@ export default Ember.Component.extend({
     launchConfirmDialog() {
       this.toggleProperty('confirmShown');
     },
-    updateMenu(menu) {
-      this.sendAction('updateMenu', this.get('menu'), this.get('title'), this.get('notes'))
+    updateMenu() {
+      this.sendAction('updateMenu', this.get('menu'), this.get('title'), this.get('notes'));
       this.set('confirmShown', false);
     },
     cancelConfirm() {

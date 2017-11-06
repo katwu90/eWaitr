@@ -1,35 +1,47 @@
 body {
   font-family: 'Lato', helvetica, sans-serif;
   padding-top: 60px;
+  background-color: #317cfc;
+  color: #e7e7e7;
 };
 
 .welcome-box {
-  margin-top: 100px;
+    background-color: #317cfc;
 }
-// .navbar{
-//   background-color: rgb(144, 188, 240);
-// };
+.top-bottom {
+  height: 20px;
+}
 
-// .image-box {
-//   height: 500px;
-//   background-image: url(https://i.imgur.com/aUnknzZ.jpg);
-//   background-repeat: no-repeat;
-//   background-attachment: fixed;
-//   background-position: center;
-//   background-size: cover;
-// };
 input {
   margin: 5px;
 }
+
 .confirm-dialog {
   margin: 5px;
 }
+
 button {
   margin: 5px;
 }
+
 .introduction-text {
-  background-color: rgba(201, 196, 212, 0.5);
+  border: 1px solid #e7e7e7;
   padding: 30px 40px;
+  margin: 30px;
+  line-height: 2.0;
+}
+
+.introduction-text h4 {
+  font-weight: 300;
+  line-height: 1.5;
+}
+.introduction-text a {
+  color: #aac5fb;
+}
+
+.introduction-text a:hover {
+  color: #e7e7e7;
+  font-weight: 400;
 }
 label {
   text-transform: uppercase;
@@ -47,10 +59,28 @@ button {
   margin: 5px;
 }
 
-.menu-title {
-  text-transform: uppercase;
+.menu-item {
+  border: dashed 1px #e7e7e7;
+  padding: 15px;
+  margin: 5px;
+  border-radius: 25px;
 }
 
+.menu-title {
+  text-transform: uppercase;
+  padding: 5px;
+  background-color: #e7e7e7;
+  color: #317cfc;
+  text-align: center;
+  border-radius: 25px;
+}
+.menu-title:hover {
+  background-color: #FFF;
+}
+
+.menu-notes {
+  text-align: center;
+}
 a:hover {
   text-decoration: none;
 }
@@ -58,3 +88,16 @@ a:hover {
 .item-name {
   text-transform: uppercase;
 };
+
+.food-category {
+  text-align: center;
+}
+
+.food-name {
+  font-weight: 300;
+  text-align: center;
+}
+
+.delete-item-button {
+  text-align: right;
+}

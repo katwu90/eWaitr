@@ -5,7 +5,7 @@ export default Ember.Component.extend({
     launchConfirmDialog() {
       this.toggleProperty('confirmShown');
     },
-    deleteMenuConfirm(menu) {
+    deleteMenuConfirm() {
       //call the onConfirm property to invoke the passed in action
       this.sendAction('deleteMenuConfirm', this.get('menu'));
       this.set('confirmShown', false);

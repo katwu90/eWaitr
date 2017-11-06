@@ -9,8 +9,8 @@ export default Ember.Component.extend({
     launchConfirmDialog() {
       this.toggleProperty('confirmShown');
     },
-    updateMenuItem(item) {
-      this.sendAction('updateMenuItem', this.get('item'), this.get('name'), this.get('price'), this.get('description'), this.get('foodCategory'))
+    updateMenuItem() {
+      this.sendAction('updateMenuItem', this.get('item'), this.get('name'), this.get('price'), this.get('description'), this.get('foodCategory'));
       //call the onConfirm property to invoke the passed in action
       this.set('confirmShown', false);
     },
