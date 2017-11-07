@@ -22,6 +22,10 @@ export default Ember.Component.extend({
     },
     cancelConfirm() {
       this.set('confirmShown', false);
+      this.set('menuItem.name', null);
+      this.set('menuItem.price', null);
+      this.set('menuItem.description', null);
+      this.set('menuItem.foodCategory', null);
     }
   }
 });
