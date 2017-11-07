@@ -18,11 +18,27 @@ export default Ember.Route.extend({
       });
     },
     deleteItem(item) {
-      item.destroyRecord();
+      item.destroyRecord()
+      .then(() => {
+        this.get('flashMessages').success('Successfully deleted!');
+      })
+      .catch(() => {
+        item.rollbackAttributes();
+        this.get('flashMessages').danger('Failed to delete!');
+      });
     },
     deleteMenu (menu) {
-      menu.destroyRecord().then(() => this.transitionTo('menus'));
+      menu.destroyRecord()
+      .then(() => this.transitionTo('menus'))
+      .then(() => {
+        this.get('flashMessages').success('Successfully deleted!');
+      })
+      .catch(() => {
+        item.rollbackAttributes();
+        this.get('flashMessages').danger('Failed to delete!');
+      });
     },
+    // messages
     updateMenuItem (item, name, price, description, foodCategory) {
       item.set('name', name);
       item.set('price', price);

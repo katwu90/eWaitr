@@ -14,7 +14,15 @@ My vision for this web app is for restaurants to be able to create their menus a
 [Github Repository for eWaitr API](https://github.com/katwu90/eWaitr-rails-back-end).
 
 ## Planning Process and Problem-Solving Strategies
-My
+My planning process for this project was to write down the user stories so I know what the application should be able to do. Using the information from the user stories, I created the resources for the API, I knew that I would need users who were the restaurants and they would need to create their menu and the items in their menu for it to display for their customers to choose from and order. I white board out the different resources I had and the resources I need to join it. For each of the resource I also included the columns that I would need. The hardest part was coming up with the join tables that would connect the different resources I had. One join table that I needed was an orders table that would have a menu item and a quantity and a customer can have multiple orders. Once I was able connect customers with menu items through the orders table it was much clearer how I can declare this relationship with Ruby on Rails. I mapped out this relationship in a Entity Relationship Diagram before creating my resources for my API.
+
+After I had my user stories and entity relationship diagram, I sketched out a wireframe that shows how the application will display this information to the user. Once everything was planned out, I got started on creating the back end one resource at a time and adding in the relatioships as I went along. Then I tested all my API endpoints with CURL scripts to make sure they all worked. I was able to create all resources for my API on the first day of the project.
+
+After creating all the resources and all endpoints were fully functional, I was ready to start creating the front end of the application. For the front end of the application, I decided to use a front end MVC framework, Ember.js. I thought it would be the easiest way to display all the information that I have for all my resources because I would be able create a component for how one item in my resource looks like and be able to use that same component for all the other items in my resource. And since there are so many routes, it is easier to use for the user to interact with when you have different URL paths for all those resources.
+
+Ember.js is front end framework that I learned in a week so I was not entirely comfortable with it but for each new problem that I encountered with Ember, I Googled and read their read a lot of their documentation and I was able to resolve a lot of my errors that way. Luckily their documentation was very beginner friendly which made it possible for me to learn a lot of this as I went along.
+
+Overall this project is still not complete, but I do have two resources beside users with full CRUD function.
 
 ## Technologies Used
 - HTML
