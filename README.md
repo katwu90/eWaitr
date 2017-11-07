@@ -46,7 +46,7 @@ A registered restaurant can view all items in their menus.
 
 <img src="./wireframe.jpg" width="400px">
 
-Application Preview
+### Application Preview
 <img src="https://i.imgur.com/wR8ygP2.png" width="400px">
 
 
