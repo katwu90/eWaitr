@@ -38,7 +38,7 @@ export default Ember.Route.extend({
         this.get('flashMessages').danger('Failed to delete!');
       });
     },
-    // messages
+    // messagessfsdf
     updateMenuItem (item, name, price, description, foodCategory) {
       item.set('name', name);
       item.set('price', price);
