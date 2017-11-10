@@ -34,7 +34,7 @@ export default Ember.Route.extend({
         this.get('flashMessages').success('Successfully deleted!');
       })
       .catch(() => {
-        item.rollbackAttributes();
+        menu.rollbackAttributes();
         this.get('flashMessages').danger('Failed to delete!');
       });
     },
